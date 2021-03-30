@@ -247,7 +247,9 @@
 				their various applications, with over 600 publications.  He has chaired or served on over 100 program committees of 
 				international conferences and workshops, including PC co-chair for KDD, SDM, and ICDM conferences, vice chair for 
 				ICDE and ICDM conferences, and Americas Coordinator for a VLDB conference. His book "Data Mining: Concepts and Techniques" 
-				(2nd ed., Morgan Kaufmann, 2006) has been popularly used as a textbook worldwide.</p>
+				(2nd ed., Morgan Kaufmann, 2006) has been popularly used as a textbook worldwide.
+			</p>
+			
 		</div>
 		
 		<h2>Invited Talks</h2>
@@ -259,7 +261,36 @@
 				Technology group. She then moved into applied research in Microsoft's Bing search team. She was a product manager and 
 				an engineering manager in the Search Science applied research team at eBay, focusing on eCommerce search across the eBay sites. 
 				At A9 and Amazon, she focused on natural language processing for product search query understanding and then on utilization 
-				for sponsored products. Currently she is a principal scientist at Adobe working on search and natural language processing.</p>
+				for sponsored products. Currently she is a principal scientist at Adobe working on search and natural language processing.
+			</p>
+			<h5>Talk Title: Integrating 3rd-Party Knowledge Graphs: Lessons from Adobe Stock</h5>
+			<h5>Abstract:</h5>
+			<p>
+				Building knowledge graph (KG)-based features in an eCommerce site involves many steps from deciding whether to build the KG yourself 
+				or use an existing one to integrating the KG into the eCommerce architecture and running AB tests for KG-based features. In this talk, 
+				I present lessons learned from integrating a 3rd-party KG into Adobe Stock. Adobe Stock sells stock assets such as photos, 
+				illustrations, and videos. Customers can search for assets in over 20 languages. Adobe Stock wanted a KG with mappings to these 
+				languages to improve search relevance. Relevance issues included missing mappings from concepts to specific languages and cross-talk 
+				from text-based asset tags. For example, on the French site, the query "pain" (bread) returned assets showing people with injuries 
+				due to the English textual tag for pain. We also wanted the KG to help with recommendations and intelligent back-off for null results 
+				queries. Lesson learned: be clear on your top priority use case for the KG and evaluate against that. We did an initial evaluation to 
+				determine whether the 3rd-party KG would be appropriate and what it would entail to integrate it into our systems. Lesson learned: 
+				evaluation of KGs requires significant time around applied science and engineering. After licensing the KG, we built a platform to 
+				host it, an extracted sub-graph for use in Adobe Stock, tools for different views, and an integration pipeline for the search index 
+				and query. Lessons learned: build tooling first so that you can quickly debug issues; design for the long run, but prioritize ruthlessly 
+				for what to build first. After building the first small search indices, many of the issues we knew to expect from the evaluation were 
+				showing up: the named entity mappings were overapplying; there were missing and orphaned mappings with some languages missing mappings 
+				for a concept; the confidence scores on the mappings were crucial for removing edge cases. Lesson learned: Knowing that an issue will 
+				arise and planning in advance how to address it is important but there is still a lot of work to take those plans to production. After 
+				adjusting for the known issues, we then conducted an extensive search relevance evaluation to look for remaining issues and to determine 
+				whether we needed to retrain the ranker with the new KG. Lesson learned: repeated evaluation after changes is imperative to catch 
+				remaining issues. Overall, we believe we made the right decision to integrate a specialized 3rd-party KG into Adobe Stock: the KG 
+				integration into Adobe Stock will bring greatly improved search relevance to our customers, especially for languages other than English, 
+				French, and German, while providing a more modular architecture around concept mappings. But for future KG explorations we will pay 
+				careful attention to the lessons learned for a faster path to production.
+			</p>
+			
+				
 		</div>
 	
     	</section>
